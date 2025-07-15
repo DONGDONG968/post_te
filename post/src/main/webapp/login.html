@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>게시판 로그인</title>
+
+  <!-- 전용 CSS -->
+  <link rel="stylesheet" href="login.css">
+
+  <!-- Kakao / Naver SDK -->
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.5/kakao.min.js"></script>
+  <script src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"></script>
+  
+  <script src="login.js"></script>
+</head>
+<body>
+  <div class="login-container">
+    <h2>게시판 로그인</h2>
+
+    <!-- ─────── ① 일반(ID/PW) 로그인 ─────── -->
+    <div class="local-login">
+      <input type="text" id="username" placeholder="아이디">
+      <input type="password" id="password" placeholder="비밀번호">
+      <button id="local-login-btn" onClick="login()">로그인</button>
+    </div>
+	
+	
+    <!-- ─────── ② SNS 로그인 ─────── -->
+    <div class="sns-login">
+      <!-- ②-a) Kakao -->
+      <button type="button" id="kakao-login-btn" class="sns-btn kakao" onClick="inspection()"> 카카오 로그인 </button>
+
+      <!-- ②-b) Naver -->
+      <button type="button" id="naver-login-btn" class="sns-btn naver" onClick="inspection()"> 네이버 로그인 </button>
+    </div>
+  </div>
+<!-- 
+  <script> init(); </script>
+ -->
+</body>
+</html>
