@@ -18,7 +18,7 @@
     ResultSet rs = null;
     try {
         conn = DriverManager.getConnection(
-            "jdbc:mysql://localhost:3306/bbs_db", "root", "ehdals23");
+            "jdbc:mysql://localhost:3306/bbs_db", "root", "1234");
         stmt = conn.createStatement();
         rs = stmt.executeQuery("SELECT * FROM posts ORDER BY id DESC");
 %>

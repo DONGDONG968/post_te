@@ -12,7 +12,7 @@ PreparedStatement pstmt = null;
 
 try {
     Class.forName("com.mysql.cj.jdbc.Driver");
-    conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bbs_db", "root", "ehdals23");
+    conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bbs_db", "root", "1234");
     pstmt = conn.prepareStatement("INSERT INTO posts (title, content, author) VALUES (?, ?, ?)");
     pstmt.setString(1, title);
     pstmt.setString(2, content);

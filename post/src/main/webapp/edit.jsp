@@ -8,7 +8,7 @@ String title = "", content = "", author = "";
 try {
     Class.forName("com.mysql.cj.jdbc.Driver");
     Connection conn = DriverManager.getConnection(
-        "jdbc:mysql://localhost:3306/bbs_db", "root", "ehdals23");
+        "jdbc:mysql://localhost:3306/bbs_db", "root", "1234");
     PreparedStatement ps = conn.prepareStatement(
         "SELECT title, content, author FROM posts WHERE id = ?");
     ps.setInt(1, Integer.parseInt(id));
